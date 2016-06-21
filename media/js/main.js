@@ -73,3 +73,9 @@ $(document).ready(function() {
      ******************************************************************/
     prettyPrint();
 });
+
+(function getLocationHref() {
+    let href = window.location.href;
+    let rexHref = href.match(/\/blog\/.*/);
+    console.log(rexHref[0]);
+})();
