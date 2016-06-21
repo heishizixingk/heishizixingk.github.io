@@ -133,3 +133,6 @@
     overflow-x: auto;
     word-wrap: normal;
   }
+  ::selection {
+      background: #D6EDFF;
+  }
