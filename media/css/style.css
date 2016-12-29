@@ -62,6 +62,7 @@ h1 {
 	letter-spacing: -1px;
 	color: #222;
 	font-weight: bold;
+    text-align: center;
 }
 
 h2 {
@@ -139,13 +140,13 @@ nav.main-nav a.cta {
 }
 
 #wrapper {
-  max-width: 600px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 60px 40px 100px 40px;
 }
 
 #wrapper.home {
-	max-width: 600px;
+	max-width: 600;
 	margin: 0 auto;
 	padding: 0px 40px 20px 40px;
 }
@@ -183,7 +184,7 @@ a,
 }
 
 ul 	{ margin:0; padding:0; }
-li	{ list-style-type:circle; list-style-position:inside; }
+li	{ list-style-type:circle; list-style-position:inside; margin: 0 auto; width: 40%;}
 
 ol li {
   list-style-type: decimal;
@@ -225,6 +226,11 @@ em, i { font-style: italic; }
 	color: #bbb;
 }
 
+.about-post {
+    width: 525px;
+    margin: 0 auto;
+    text-align: left;
+}
 .post header {
 	text-align:center;
 
@@ -645,10 +651,4 @@ h2.month {
 	.post h2.headline { font-size: 13px; }
 	.post h1 { font-size:24px; }
 	.post h2 { font-size:20px; }
-}
-.video-container{
-    position: relative;
-    padding-top: 56%;
-    height: 0;
-    overflow: hidden;
 }

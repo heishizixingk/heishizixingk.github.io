@@ -133,9 +133,3 @@
     overflow-x: auto;
     word-wrap: normal;
   }
-  ::selection {
-      background: #D6EDFF;
-  }
-  ::-moz-selection {
-      background: #D6EDFF;
-  }
