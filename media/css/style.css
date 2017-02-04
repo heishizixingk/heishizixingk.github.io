@@ -232,6 +232,13 @@ em, i { font-style: italic; }
     margin: 0 auto;
     text-align: left;
 }
+
+.about-index {
+    width: 525px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .post header {
 	text-align:center;
 
