@@ -175,7 +175,7 @@ p a { color: #5694f1; }
 
 p img {
     position: relative;
-    top: 4px;
+    vertical-align: top;
 }
 
 /*Transitions*/
