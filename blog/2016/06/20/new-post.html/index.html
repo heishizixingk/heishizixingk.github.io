@@ -54,19 +54,21 @@
         <br />
             <section>
                 <h1>Comments</h1>
-                    <div class="ds-thread" data-thread-key="/blog/2016/06/20/new-post.html" data-title="zzZZZZ" data-url="http://heishizixingk.github.io/blog/2016/06/20/new-post.html"></div>
-                    
+                    <div id="disqus_thread"></div>
                     <script type="text/javascript">
-                     var duoshuoQuery = {short_name:'heishizixingk'};
+                     //var disqus_developer = 1;
+                     var disqus_identifier = "/blog/2016/06/20/new-post.html";
+                     var disqus_url = "http://heishizixingk.github.io/blog/2016/06/20/new-post.html";
+                     var disqus_shortname = 'heishizixingk';
+                     /* * * DON'T EDIT BELOW THIS LINE * * */
                      (function() {
-                         var ds = document.createElement('script');
-                         ds.type = 'text/javascript';ds.async = true;
-                         ds.src = 'https://static.duoshuo.com/embed.js';
-                         ds.charset = 'UTF-8';
-                         (document.getElementsByTagName('head')[0]
-                       || document.getElementsByTagName('body')[0]).appendChild(ds);
+                         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                         dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                      })();
                     </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             </section>
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
