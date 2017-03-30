@@ -51,7 +51,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 html, body { height: 100%; }
 
 body {
-	font-family: 'Ubuntu', sans-serif;
+	background-color: #f1f1f1;
+    font-family: 'Ubuntu', sans-serif;
     /* font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif; */
 	color: #666;
 	-webkit-font-smoothing: antialiased;
@@ -115,8 +116,8 @@ nav.main-nav {
 
 	/*max-width: 600px;*/
 	/*width:100%;*/
-	background: #fff;
-	background: rgba(255,255,255,.90);
+	/* background: #fff; */
+	/* background: rgba(255,255,255,.90); */
 	margin: 0 auto;
 	text-align: right;
 	/*position: fixed;*/
