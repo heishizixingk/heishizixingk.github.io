@@ -142,9 +142,9 @@ nav.main-nav a.cta {
 }
 
 #wrapper {
-    max-width: 880px;
+    max-width: 808px;
     margin: 0 auto;
-    padding: 60px 40px 100px 40px;
+    padding: 60px 0 100px 0;
 }
 
 #wrapper.home {
@@ -172,6 +172,8 @@ a,
 	color: #5694f1;
 }
 
+h1 a { color: #CD3278; }
+
 p a { color: #CD3278; }
 
 p img {
@@ -191,10 +193,25 @@ a,
 }
 
 ul 	{ margin:0; padding:0; }
-li	{ list-style-type:circle; list-style-position:inside; margin: 0 auto; width: 350px;}
+li	{
+    list-style-type:circle;
+    list-style-position:inside;
+    margin: 0 auto;
+    /* padding: 1px 0 15px 0; */
+    width: 350px;
+}
+
+li a {
+    color: #CD3278;
+}
 
 ol li {
-    list-style-type: decimal;
+    /* list-style-type: decimal; */
+    list-style-type:circle;
+    list-style-position:outside;
+    margin: 0 auto;
+    padding: 1px 0 15px 0;
+    width: 750px;
 }
 
 /* Line Height */
