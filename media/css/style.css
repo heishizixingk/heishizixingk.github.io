@@ -15,9 +15,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     font-family: 'icons';
     src: url('../fonts/icons.eot');
     src: url('../fonts/icons.eot#iefix') format('embedded-opentype'),
-    url('../fonts/icons.woff') format('woff'),
-    url('../fonts/icons.ttf') format('truetype'),
-    url('../fonts/icons.svg#icons') format('svg');
+         url('../fonts/icons.woff') format('woff'),
+         url('../fonts/icons.ttf') format('truetype'),
+         url('../fonts/icons.svg#icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -112,11 +112,11 @@ h2 {
 }
 
 nav.main-nav {
-    padding: 20px 20px 0;
+    padding: 20px 10px 15px;
 
     /*max-width: 600px;*/
     /*width:100%;*/
-    /* background: #fff; */
+    background: #303030;
     /* background: rgba(255,255,255,.90); */
     margin: 0 auto;
     text-align: right;
@@ -128,17 +128,23 @@ nav.main-nav a {
     top: 8px;
     right: 6px;
     padding: 8px 12px;
-    color: #5badf0;
+    color: #b1b1b1;
     font-size: 13px;
     /*font-weight: bold;*/
     line-height: 1.35;
-    border-radius: 3px;
+    /* border-radius: 3px; */
 
 }
 nav.main-nav a.cta {
-    background: #5badf0;
+    /* background: #5badf0; */
     color: #fff;
-    margin-left: 12px;
+    /* margin-left: 12px; */
+    background-image: url("https://raw.githubusercontent.com/heishizixingk/heishizixingk.github.io/master/index.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%; /* Resize the background image to cover the entire container */
+    margin: 0 auto;
+    padding: 20px;
 }
 
 #wrapper {
@@ -701,3 +707,42 @@ h2.month {
     .post h1 { font-size:24px; }
     .post h2 { font-size:20px; }
 }
+@-moz-keyframes charlieeee {
+  from { background-position:top left; } 
+  to {background-position:top right; }
+}
+@-webkit-keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
+}
+@-o-keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
+}
+@-ms-keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
+}
+@-khtml-keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
+}
+@keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
+}
+.catchadream{
+  background: -webkit-linear-gradient(left, red 0%, red 14.28%, orange 14.28%, orange 28.57%, yellow 28.57%, yellow 42.85%, green 42.85%, green 57.14%, blue 57.14%, blue 71.43%, indigo 71.43%, indigo 85.72%, violet 85.72%, violet 100%);
+  background: red; /* For browsers that do not support gradients */
+  /* For Opera 11.1 to 12.0 */
+  background: -o-linear-gradient(left, red 0%, red 14.28%, orange 14.28%, orange 28.57%, yellow 28.57%, yellow 42.85%, green 42.85%, green 57.14%, blue 57.14%, blue 71.43%, indigo 71.43%, indigo 85.72%, violet 85.72%, violet 100%);
+  /* For Fx 3.6 to 15 */
+  background: -moz-linear-gradient(left, red 0%, red 14.28%, orange 14.28%, orange 28.57%, yellow 28.57%, yellow 42.85%, green 42.85%, green 57.14%, blue 57.14%, blue 71.43%, indigo 71.43%, indigo 85.72%, violet 85.72%, violet 100%);
+  /* Standard syntax */
+  background: linear-gradient(to right, red 0%, red 14.28%, orange 14.28%, orange 28.57%, yellow 28.57%, yellow 42.85%, green 42.85%, green 57.14%, blue 57.14%, blue 71.43%, indigo 71.43%, indigo 85.72%, violet 85.72%, violet 100%); 
+%);
+  animation:charlieeee 15s forwards linear infinite;
+  background-size:50% auto;
+  margin: 0 auto;
+}
+#tongue{position:cheek;}
