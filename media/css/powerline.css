@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "Ubuntu Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Ubuntu Mono derivative Powerline"),
+         url(/media/fonts/UbuntuMono.woff2) format("woff2");
+}
+
+.powerline {
+  font-family: "Ubuntu Mono derivative Powerline", "Droid Sans Mono", Mono;
+  font-weight: bold;
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 1.5em;
+  line-height: 1.5em;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  /* center bg-color */
+  /* background-color: #1a1a1a; */
+  position: fixed;
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
+  margin: 0;
+  background: linear-gradient(to right, #303030, #b6034f);
+  z-index: 9999;
+}
+.powerline a {
+  text-decoration: none;
+}
+.powerline li {
+    margin: initial;
+    width: initial;
+}
+.powerline .left,
+.powerline .right {
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+
+.powerline a.cta {
+    /* background: #5badf0; */
+    color: #fff;
+    /* margin-left: 12px; */
+    background-image: url("../images/infinitely.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%; /* Resize the background image to cover the entire container */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* size transition */
+.powerline .shrinkable {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  max-width: 4em;
+  -webkit-transition: max-width 0.5s ease-in-out;
+  -moz-transition: max-width 0.5s ease-in-out;
+  -o-transition: max-width 0.5s ease-in-out;
+  -ms-transition: max-width 0.5s ease-in-out;
+  transition: max-width 0.5s ease-in-out;
+}
+.powerline .shrinkable:hover {
+  max-width: 1000px;
+}
+.powerline .center {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* arrows */
+.powerline .left .endsection {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 0.8em solid transparent;
+  border-left: 0.8em solid;
+}
+.powerline .right .endsection {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-right: 0.8em solid;
+  border-bottom: 0.8em solid transparent;
+}
+.powerline div:not(.endsection) {
+  padding: 0 14px;
+}
+
+
+
+/* coloring */
+/* TODO: UGH redo markup for easier targeting */
+.powerline .left div:first-child {
+  background-color: #e74c3c;
+}
+.powerline .left div:first-child+.endsection {
+  border-left-color: #e74c3c;
+  background-color: #2a2a2a;
+}
+.powerline .left div:first-child a {
+  color: #f5e11d;
+}
+.powerline .left div:first-child a:first-child {
+  color: #f8f8f8;
+}
+.powerline .left div {
+  background-color: #2a2a2a;
+}
+.powerline .left div+.endsection {
+  border-left-color: #2a2a2a;
+  background-color: #fff0;
+}
+.powerline .left div a {
+  color: #7f5ab6;
+}
+.powerline .center {
+  background-color: #1a1a1a;
+}
+.powerline .center a {
+  color: #c0392b;
+}
+.powerline .right .endsection:first-child {
+  border-right-color: #2a2a2a;
+}
+.powerline .right div:nth-child(2) {
+  background-color: #2a2a2a;
+}
+.powerline .right div:nth-child(2) a {
+  color: #f8f8f8;
+}
+.powerline .right div:nth-child(2)+.endsection {
+  background-color: #2a2a2a;
+  border-right-color: #e74c3c;
+}
+.powerline .right div:nth-child(2)+.endsection+div {
+  background-color: #e74c3c;
+}
+.powerline .right div:nth-child(2)+.endsection+div a {
+  color: #f8f8f8;
+}
+
