@@ -7,17 +7,36 @@
         <meta name="description" content="没有描述辣" />
     <link rel="stylesheet" href="/media/css/style.css">
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono">
+    <link rel="stylesheet" href="/media/css/powerline.css">
 </head>
 
     <body class="container">
-            <nav class="main-nav">
-        <a href="/blog">Archive</a>
-        <a href="/tags">Tag</a>
-        <a href="/about/">About</a>
-        <a class="cta" href="https://hadal.space/"></a>
-    </nav>
-    <hr class="catchadream" style="height:3px;border:none;width:100%"></hr>
+        <ul class="powerline">
+    <li class="left">
+        <div>
+            <a href="/about/"> ϟϟϟ *About* </a>
+            <a href="/tags"> *Tag* </a>
+            <a href="/blog"> *Archives* </a>
+            <!-- <a class="cta" href="/"></a> -->
+        </div>
+        <div class="endsection"></div>
+        <div class="shrinkable">
+            <a id="playing" href="https://www.last.fm/user/heishizixingk" target="_blank"> 🎵 Playing now</a>
+        </div>
+        <div class="endsection"></div>
+    </li>
+    <li class="right">
+        <div class="endsection"></div>
+        <div><a href="#top">Top</a></div>
+    </li>
+</ul>
+<!-- <nav class="main-nav">
+     <a href="/blog"> 📝 Archive</a>
+     <a href="/tags"> 📎 Tag</a>
+     <a href="/about/"> ϟϟϟ About</a>
+     <a class="cta" href="/"></a>
+     </nav> -->
+<!-- <hr class="catchadream" style="height:3px;border:none;width:100%"></hr> -->
 
         <div>
     <section id="wrapper">
@@ -28,15 +47,15 @@
             <br />
             <section id="post-body">
                 <div class="about-index">
-    <p>好吧~其实这里只是一个吹牛逼的地方~或许也可以来听听歌~~ <img alt="" src="https://emojipedia-us.s3.amazonaws.com/thumbs/60/microsoft/58/ghost_1f47b.png" height="25"/></p>
-    <iframe style="border: 0; width: 465px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1659410235/size=small/bgcol=333333/linkcol=ffffff/track=1427979884/transparent=true/" seamless><a href="http://shadowkingdomrecords.bandcamp.com/album/open-the-gates">Open the Gates by Manilla Road</a></iframe>
+    <p>好吧~其实这里只是一个吹牛逼的地方~或许也可以来听听歌~~ <a href="https://www.xiami.com/song/1776186108" target="_blank" title="Terrible Swift Sword"><img alt="" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/146/dagger-knife_1f5e1.png" height="25"/></p></a>
+    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1659410235/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track=1427979884/transparent=true/" seamless><a href="http://shadowkingdomrecords.bandcamp.com/album/open-the-gates">Open the Gates by Manilla Road</a></iframe>
 </div>
 
             </section>
     </section>
 </div>
 
-        <div>
+        <div class="content">
     <section id="wrapper">
         <br />
         <br />
@@ -44,23 +63,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
         <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script src="/media/js/main.js"></script>
-        <div align="center">
-            <footer id="footer">
-                <p class="small">
-                    Copyleft <a href="https://zh.wikipedia.org/wiki/Template:FakeGuideline" target="_blank">💘</a> 2012 - <span id="footerYear"></span> <a href="mailto:dark-1944@live.cn">heishizixingk</a>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <a id="footer-img" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0">
-                        <img alt="CC BY-NC-SA" src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" height="15" width="80"/>
-                    </a>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">Org-Page 💝</a>
-                    <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
-                </p>
-                <br />
-            </footer>
-        </div>
+        <script type="text/javascript">
+         $.ajax({
+             url: "https://bots.tinysubversions.com/u/heishizixingk/",
+             cache: false,
+             /* async: false, */
+             context: document.body,
+             success: function(res) {
+                 NowPlaying(res);
+             }
+         })
+         function NowPlaying(res) {
+             const np = $(res).find("li").first().text();
+             document.getElementById("playing").innerHTML = "🎵 Playing now: " + np;
+         }
+        </script>
     </section>
 </div>
+<footer id="footer">
+    <p class="small">
+        Copyleft <a href="https://zh.wikipedia.org/wiki/Template:FakeGuideline" target="_blank">💘</a> 2012&nbsp;-&nbsp;<span id="footerYear"></span> <a href="mailto:dark-1944@live.cn">heishizixingk</a>&nbsp;-&nbsp;<a id="footer-img" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0"><img alt="CC BY-NC-SA" src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" height="15" width="80"/></a>&nbsp;-&nbsp;Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">Org-Page 💝</a>
+        <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+    </p>
+</footer>
 
     </body>
 </html>

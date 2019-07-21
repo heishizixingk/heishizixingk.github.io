@@ -8,17 +8,36 @@
         <meta name="keywords" content="music" />
     <link rel="stylesheet" href="/media/css/style.css">
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono">
+    <link rel="stylesheet" href="/media/css/powerline.css">
 </head>
 
     <body class="container">
-            <nav class="main-nav">
-        <a href="/blog">Archive</a>
-        <a href="/tags">Tag</a>
-        <a href="/about/">About</a>
-        <a class="cta" href="https://hadal.space/"></a>
-    </nav>
-    <hr class="catchadream" style="height:3px;border:none;width:100%"></hr>
+        <ul class="powerline">
+    <li class="left">
+        <div>
+            <a href="/about/"> ϟϟϟ *About* </a>
+            <a href="/tags"> *Tag* </a>
+            <a href="/blog"> *Archives* </a>
+            <!-- <a class="cta" href="/"></a> -->
+        </div>
+        <div class="endsection"></div>
+        <div class="shrinkable">
+            <a id="playing" href="https://www.last.fm/user/heishizixingk" target="_blank"> 🎵 Playing now</a>
+        </div>
+        <div class="endsection"></div>
+    </li>
+    <li class="right">
+        <div class="endsection"></div>
+        <div><a href="#top">Top</a></div>
+    </li>
+</ul>
+<!-- <nav class="main-nav">
+     <a href="/blog"> 📝 Archive</a>
+     <a href="/tags"> 📎 Tag</a>
+     <a href="/about/"> ϟϟϟ About</a>
+     <a class="cta" href="/"></a>
+     </nav> -->
+<!-- <hr class="catchadream" style="height:3px;border:none;width:100%"></hr> -->
 
         <div>
     <section id="wrapper">
@@ -29,17 +48,17 @@
             <br />
             <section id="post-body">
                 
-<div id="outline-container-org25f13b0" class="outline-2">
-<h2 id="org25f13b0">The New Messiah</h2>
-<div class="outline-text-2" id="text-org25f13b0">
+<div id="outline-container-org09f5c96" class="outline-2">
+<h2 id="org09f5c96">The New Messiah</h2>
+<div class="outline-text-2" id="text-org09f5c96">
 <p>
 译自瑞典 Heavy Metal 团 <a href="https://www.metal-archives.com/bands/Mindless_Sinner/23990">Mindless Sinner</a> 2015 专辑 The New Messiah 同名曲，水平极其有限，纯属自娱自乐，欢迎观者吐槽。
 </p>
 </div>
 
-<div id="outline-container-orgc59c7e3" class="outline-3">
-<h3 id="orgc59c7e3">The New Messiah</h3>
-<div class="outline-text-3" id="text-orgc59c7e3">
+<div id="outline-container-orgac64a20" class="outline-3">
+<h3 id="orgac64a20">The New Messiah</h3>
+<div class="outline-text-3" id="text-orgac64a20">
 <p>
 你真的能够看到我吗？ <br />
 或许你看到的只是被蒙蔽的光 <br />
@@ -99,9 +118,9 @@
 </div>
 
 
-<div id="outline-container-org8500846" class="outline-3">
-<h3 id="org8500846">Follow Your Path</h3>
-<div class="outline-text-3" id="text-org8500846">
+<div id="outline-container-org8d56cd4" class="outline-3">
+<h3 id="org8d56cd4">Follow Your Path</h3>
+<div class="outline-text-3" id="text-org8d56cd4">
 <p>
 起初五人一伙 <br />
 我们写了一些曲子让它们去翱翔 <br />
@@ -151,7 +170,7 @@
     </section>
 </div>
 
-        <div>
+        <div class="content">
     <section id="wrapper">
             <div class="post-meta">
                 <span title="post date" class="post-info">2017-03-11</span>
@@ -181,23 +200,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
         <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script src="/media/js/main.js"></script>
-        <div align="center">
-            <footer id="footer">
-                <p class="small">
-                    Copyleft <a href="https://zh.wikipedia.org/wiki/Template:FakeGuideline" target="_blank">💘</a> 2012 - <span id="footerYear"></span> <a href="mailto:dark-1944@live.cn">heishizixingk</a>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    <a id="footer-img" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0">
-                        <img alt="CC BY-NC-SA" src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" height="15" width="80"/>
-                    </a>
-                    &nbsp;&nbsp;-&nbsp;&nbsp;
-                    Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">Org-Page 💝</a>
-                    <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
-                </p>
-                <br />
-            </footer>
-        </div>
+        <script type="text/javascript">
+         $.ajax({
+             url: "https://bots.tinysubversions.com/u/heishizixingk/",
+             cache: false,
+             /* async: false, */
+             context: document.body,
+             success: function(res) {
+                 NowPlaying(res);
+             }
+         })
+         function NowPlaying(res) {
+             const np = $(res).find("li").first().text();
+             document.getElementById("playing").innerHTML = "🎵 Playing now: " + np;
+         }
+        </script>
     </section>
 </div>
+<footer id="footer">
+    <p class="small">
+        Copyleft <a href="https://zh.wikipedia.org/wiki/Template:FakeGuideline" target="_blank">💘</a> 2012&nbsp;-&nbsp;<span id="footerYear"></span> <a href="mailto:dark-1944@live.cn">heishizixingk</a>&nbsp;-&nbsp;<a id="footer-img" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0"><img alt="CC BY-NC-SA" src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" height="15" width="80"/></a>&nbsp;-&nbsp;Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">Org-Page 💝</a>
+        <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+    </p>
+</footer>
 
     </body>
 </html>
