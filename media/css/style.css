@@ -226,6 +226,17 @@ ol li {
     width: 750px;
 }
 
+.org-ul {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+.org-li {
+    position: relative;
+    left: -50%;
+}
+
 /* Line Height */
 #post-body, p { line-height:1.7; }
 
