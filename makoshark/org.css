@@ -407,6 +407,11 @@ img {
     /* top: 100px; */
 }
 
+.outline-3 {
+    padding-left: 15px;
+    border-left: 3px solid #F88379;
+}
+
 #postamble {
     max-width: 1140px;
     margin: 0 auto;
